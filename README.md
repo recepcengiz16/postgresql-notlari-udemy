@@ -1,0 +1,1 @@
+Udemy de takip ettiğim eğitimden aldığım notlar.
