@@ -1,0 +1,1 @@
+-- order by: gelen sorgu cümlesini sıralamada kullanılır.
