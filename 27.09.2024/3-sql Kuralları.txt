@@ -1,0 +1,5 @@
+Sql ifadeleri büyük küçük harfe duyarlı değildir. SELECT ya da select şeklinde yazabiliriz.
+
+Bir sql sorgusu bir ya da birden fazla satıra sahip olabilir.
+
+Sql cümleleri genellikle güzel gözükmesi için farklı satırlarda yazılır ki okunurluk artsın
