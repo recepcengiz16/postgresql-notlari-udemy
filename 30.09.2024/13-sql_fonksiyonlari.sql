@@ -1,0 +1,4 @@
+-- Sql fonksiyonları: Veriler üzerinde hesaplama vb gibi işlemler yapıp kullanıcıya çıktı üretirler.
+-- Bir veya daha fazla girdi ile bizlere çıktı üretirler.
+-- Hazır olan fonksiyonlar olduğu gibi biz de yazabiliriz. 
+-- Hazır olan fonksiyonlar nelerdir: Date, string, math, aggregate, conversion(dönüşüm) gibi
