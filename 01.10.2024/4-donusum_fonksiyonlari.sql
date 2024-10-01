@@ -1,4 +1,5 @@
 -- dönüşüm fonksiyonları
+-- tür dönüşümleri uyumlu olduğu zaman dönüştürülebilir.
 
 --to_date: stringi bir tarihe dönüştürür.
 SELECT TO_DATE('20241001','yyyymmdd'); 
@@ -26,5 +27,28 @@ SELECT CAST('00005469' as integer); -- bu şekilde de integer yapabiliriz
 
 
 --to_char: Birçok veri tipini stringe dönüştürür.
+SELECT payment_date TO_CHAR(payment_date,'HH24:MI:SS') from tablo_adi -- girilen tarihi bu formata çevir. 
+SELECT payment_date TO_CHAR(payment_date,'MON-DD-YYYY HH12:MI PM') from tablo_adi -- girilen tarihi bu formata çevir. 
+SELECT payment_date TO_CHAR(amount,'99D99') from tablo_adi -- girilen tarihi bu formata çevir. D nokta manasında 
 
 --cast: bir tipi başka bir tipe dönüştürür.
+-- bir diğer cast işlemi de expression::type. '00005469'::integer gibi
+SELECT CAST('100' as integer);
+SELECT CAST('2024-10-10' as date);
+SELECT CAST('15-OCT-2024' as date);
+SELECT CAST('true' as boolean);
+SELECT CAST('t' as boolean); -- true manasında
+SELECT CAST('f' as boolean); -- false manasında
+SELECT CAST('2 year 5 months 20 days' as interval) -- interval değerleri bu şekilde de varebiliriz.
+SELECT CAST(2800 as money); -- Çıktı:$2,800.00
+SELECT CAST(current_date as text);
+SELECT CAST('22.54' as double precision); -- sadece double olmaz. double precision yazman lazım.
+
+SELECT '100'::integer;
+SELECT '01-OCT-2024'::date;
+SELECT 598::varchar;
+SELECT '15 minute'::interval; -- 15 dk öncesi veya sonrasını hesaplar.
+SELECT '2 hour'::interval; -- 2 saat sonrası
+
+
+
