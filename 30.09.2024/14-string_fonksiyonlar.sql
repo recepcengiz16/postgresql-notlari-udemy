@@ -20,7 +20,8 @@ where description ilike '%DRAMA%Australia%';
 
 
 -- concat: bir veya daha fazla stringi birleştirir
-select concat('Merhaba','Recep');
+select concat('Merhaba','Recep'); 
+select concat('Merhaba',' ','Recep'); -- bu da başka bir versiyonu
 
 -- concat_ws: iki stringi birleştirirken ilk parametre ile aralarına koyarak birleştirir.
 select concat_ws('*','Merhaba','Recep'); -- ws with seperator demek
@@ -35,9 +36,13 @@ select right('Merhaba',2);
 select length('denemeler');
 
 -- lpad ve rpad: sabit uzunlukta string oluşturur.
+select lpad('Sol',5,'*'); -- eksik olduğu için 5 karaktere tamamladı ve sol tarafına geri kalan karakter kadar * ekledi. 
+select rpad('Sağ',5,'*'); -- eksik olduğu için 5 karaktere tamamladı ve sağ tarafına geri kalan karakter kadar * ekledi.
+-- Eğer fazla olursa karakter sayısı belirttiğimiz sayıdan o zaman da belirttiğimiz sayı kadar karakteri döner sağdan veya soldan
+-- ve belirtilen karakteri de eklemez.
 
 --replace: bir string ifadede istenilen değerleri başka bir değerle değiştirir.
-select replace('Merhaba','a','e');
+select replace('Merhaba','a','e'); -- büyük küçük harf duyarlıdır.
 
 -- split part: string ifadede verdiğimiz ayraca göre parçalara ayırır.
 select split_part('Merhaba,ben,recep',',',2);
@@ -50,3 +55,4 @@ select position('Bursa' in 'Bursa güzel bir şehir. Bursa büyük bir şehir.')
 
 -- reverse: verilen ifadeyi terse çevirir.
 select reverse('merhaba');
+
