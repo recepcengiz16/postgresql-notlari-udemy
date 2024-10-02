@@ -17,3 +17,26 @@ from cars;
 select nullif(1,1); -- sonuç: null
 select nullif(1,2); --sonuç: 1
 select nullif('A','B');
+
+--case ifadesi:
+--if else mantığı ile çalışır. General ve simple form olarak 2 versiyonu vardır.
+--general
+select 
+	case
+		when sart1 then sonuc1
+		when sart2 then sonuc2
+		when sart3 then sonuc3
+		else sonuc4
+	end
+from tablo_adi;
+
+--simple: swtich case gibi düşün burada cse in yanındaki değerler whende kontrol ediyorsa doğruysa thendeki değer yapılıyor
+select 
+	case exp_
+		when sonuc1 then return1
+		when sonuc2 then return2
+		when sonuc3 then return3
+		else return4
+	end
+from tablo_adi;
+
