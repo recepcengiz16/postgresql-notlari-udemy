@@ -29,9 +29,13 @@ select (return_date - rental_date), (return_date::date - rental_date::date)
 from rental;
 
 --min: verilen değerlerin min bulur.
-
+select min(salary) from employees;
+select min(first_name) from employees; -- alfabetik olarak sıralar ve ilk değeri getirir.
+select min(hire_date) from employees; --tarihdeki min değer
 --max: verilen değerlerin max. bulur.
-
+select max(salary) from employees;
+select max(hire_date) from employees; --tarihdeki max değer
+select max(first_name) from employees; -- alfabetik olarak sıralar ve son değeri getirir.
 --count: verilen değerlerin sayısını bulur
 -- count(*) hiçbir şart olmadan bütün satır sayısını döner, 
 -- count(column): parametredeki column u null olmayan satırları sayar
