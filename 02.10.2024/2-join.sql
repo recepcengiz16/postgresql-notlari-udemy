@@ -20,7 +20,7 @@ payment
 using(customer_id)
 
 --alıştırma:
-
+select first_name,last_name,department_name from employees inner join departments using(department_id);
 
 --left join: soldaki tablonun tüm değerlerini getirir. sağdaki eşleşmiyorsa sağdaki değer null getirilir.
 --right join: sağdaki tablonun tüm değerlerini getirir. soldaki eşleşmiyorsa soldaki değer null getirilir.
