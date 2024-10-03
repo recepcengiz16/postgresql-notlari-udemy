@@ -21,5 +21,17 @@ select 'SQL2' as sq2, first_name,last_name from table_b -- 'SQL1' as sq1 diyerek
 
 --intersect: iki veya daha fazla olan sorgudaki kesişim kümesini verir. uniondan farkı union ortak satırları bir kez getiriyordu
 -- intersect bu ortak satırları getiriyor.
+select city from table_a
+intersect
+select city from table_b
 
---except:
+--except: ilk sorgunun diğer sorgudan farkını getirir. Bu yüzden hangi sorgunun farkını istiyorsak onu üste yazmalıyız.
+
+select city from table_a
+except
+select city from table_b
+
+select film_id,title from film
+except
+select i.film_id,title from inventory i inner join film f on i.film_id= f.film_id 
+order by film_id;
