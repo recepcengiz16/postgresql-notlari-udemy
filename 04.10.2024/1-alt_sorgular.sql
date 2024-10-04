@@ -53,7 +53,26 @@ where rating = 'G' and (gf.rental_duration, gf.length) in
 -- any: =, <, > gibi ifadelerle kullanılırlar.
 -- eğer column_name < any () ifadesi varsa any ifadesi ile en büyük değer gelir. sütun değeri bu büyük değerden küçük olmalı diyordu
 -- eğer column_name > any () ifadesi varsa any ifadesi ile en küçük değer gelir. sütun değeri bu küçük değerden büyük olmalı diyordu
--- eğer = any () ifadesi dersek bu in ile aynı işi yapar.
+-- eğer column_name = any () ifadesi dersek bu in ile aynı işi yapar.
 select * 
 from employees 
 where salary < any(select salary from employees where job_id=9);
+
+--all: =, <, > gibi ifadelerle kullanılırlar.
+-- eğer column_name < all () ifadesi varsa bu ifadedeki en küçükten daha küçük verileri getir demek
+-- eğer column_name > all () ifadesi varsa bu ifadedeki en büyükten daha büyük verileri getir demek
+-- eğer column_name != all dersek de bu da not in e karşılık geliyor.
+select *
+from employees where salary > all 
+	(
+		select salary from employees where manager_id = 1
+	);
+
+-- exists: sorguyu kontrol eder ve true döner ve alt sorgudaki arama işlemini sonlandırır. false olduğu sürece aramaya devam eder.
+select * from customer c
+where exist 
+	(
+		select 1 from payment p where p.customer_id = c.customer_id -- neden 1 yazdık. exist de bir sütuna ihyiyaç olmuyor ama 
+		--select sorgusu yanında bir sütun olmadan 
+		-- çalışmaz biz de dummy column(aptal sütun- hiçbir önemi olmayan sütun) ekledik
+	)
