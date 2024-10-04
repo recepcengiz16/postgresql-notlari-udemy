@@ -29,7 +29,7 @@ from employees e;
 select department_id, count(*) 
 from employees 
 group by department_id
-having count(*)> (select count(*) from employees e where e.department_id = 6);
+having count(*) > (select count(*) from employees e where e.department_id = (select department_id from departments d where d.department_name = 'IT'));
 
 
 
