@@ -32,4 +32,11 @@ group by department_id
 having count(*) > (select count(*) from employees e where e.department_id = (select department_id from departments d where d.department_name = 'IT'));
 
 
+--birden fazla satır getiren alt sorgular
+--table gibi davranırlar from ve where ifadelerinde kullanılırlar. Sütun olarak kullanılmazlar. where ile kullandığımızda
+-- in, any, all ifadeleri ile kullanılırlar.
+
+--in
+
+
 
