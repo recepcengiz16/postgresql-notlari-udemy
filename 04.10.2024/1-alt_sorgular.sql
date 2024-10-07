@@ -69,10 +69,20 @@ from employees where salary > all
 	);
 
 -- exists: sorguyu kontrol eder ve true döner ve alt sorgudaki arama işlemini sonlandırır. false olduğu sürece aramaya devam eder.
+--where sorgusundan sonra gelir direk exists ifadesi
 select * from customer c
 where exist 
 	(
 		select 1 from payment p where p.customer_id = c.customer_id -- neden 1 yazdık. exist de bir sütuna ihyiyaç olmuyor ama 
 		--select sorgusu yanında bir sütun olmadan 
 		-- çalışmaz biz de dummy column(aptal sütun- hiçbir önemi olmayan sütun) ekledik
+	)
+
+--not exists: olmayan değerleri getirir.
+select * from employees e
+where not exists 
+	(
+		select 1 from jobs j
+		where lower(job_title) like '%manager%'
+		and e.job_id = j.job_id
 	)
