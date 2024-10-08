@@ -1,0 +1,4 @@
+-- veritabanı nesneleri:
+-- table, view, sequence(unique number üreten bir nesnedir), index(bir sütuna vererek daha hızlı ulaşılmasını sağlar),
+-- synonym(nesnelere takma ad verme),constraint(verilerimizin tutarlı olmasını sağlar),package(veritabanı programlama nesnesi),
+-- procedure ve function
