@@ -88,3 +88,21 @@ group by rating;
 create table new_rable as
 table var_olan_tablo
 [with no data] -- istersek datasını da almayabiliriz istersek de alabiliriz. bu da opsiyonel
+
+
+create table movies_copy as table movies;
+
+create table movies_copy as table movies with no data;
+
+-- bu yöntem de dokümanlarda geçmez
+create table film_with_category_new as
+select *
+from film f,film_category fc,category c
+where 
+	1=0 -- bu şekilde olunca yeni tablo oluşturuyor veriler olamdan
+	and f.rating = 'R'
+	and fc.film_id = f.film_id
+	and fc.category_id = c.category_id
+order by title;
+
+
