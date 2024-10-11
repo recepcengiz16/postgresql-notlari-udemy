@@ -58,3 +58,11 @@ comment on table tablo_adi is 'Bu tablo şunun için oluşturulmuştur.'
 -- aynı şekilde sütun için de olanı var.
 comment on column cars.brand is 'Bu sütun bunun için oluşturuldu'
 
+
+-- null ekleme ve kaldırma
+alter table tablo_adi
+alter column sutun_adi
+[set not null | drop not null];
+
+alter table movie_reviews
+alter column 
