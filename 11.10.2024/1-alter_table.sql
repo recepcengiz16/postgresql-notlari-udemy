@@ -43,6 +43,7 @@ alter table tablo_adi
 alter column sutun_adi1 [set data] type new_type, -- set data opsiyonel
 alter column sutun_adi2 [set data] type new_type
 
+--sütunun tipini değiştirme
 -- tek sütun
 alter table courses
 alter column description type text;
