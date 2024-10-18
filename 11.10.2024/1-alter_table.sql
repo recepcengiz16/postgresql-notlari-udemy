@@ -65,5 +65,10 @@ alter table tablo_adi
 alter column sutun_adi
 [set not null | drop not null];
 
+--eklemesi
 alter table movie_reviews
-alter column 
+alter column review_rate set not null; -- eğer null değerler varsa o sütunda hata verir.
+
+--kaldırması
+alter table movie_reviews
+alter column review_rate drop not null;
