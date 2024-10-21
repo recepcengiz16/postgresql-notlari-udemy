@@ -65,10 +65,62 @@ alter table tablo_adi
 alter column sutun_adi
 [set not null | drop not null];
 
---eklemesi
+--not null eklemesi
 alter table movie_reviews
 alter column review_rate set not null; -- eğer null değerler varsa o sütunda hata verir.
 
---kaldırması
+--not null kaldırması
 alter table movie_reviews
 alter column review_rate drop not null;
+
+--drop columns: tablodan sütunları kaldırır.
+alter table tablo_adi
+drop column sutun_adi1,
+drop column sutun_adi2 -- birden fazla olursa da , ile ayırıp diğerini de silebiliriz.
+
+alter table movie_reviews
+drop column review_rate;
+
+-- check constraint: bir sütunun alması gereken değerlerin sınırlanması için vardır. Örneğin count sütunu 1-10 arasında 
+--değer alacak diye
+alter table tablo_adi
+add check expression_;
+
+alter table tablo_adi
+add check (review_rate between 1 and 5)
+
+
+--tabloya constraint ekleme
+alter table tablo_adi
+add constraint constraint_adi constraint_defination
+
+--örnek
+alter table courses
+add constraint uq_courses unique (course_name) -- hani tabloyu oluştururken sütunun yanına yazıyorduk ya kısıtlamayı mesela unique
+-- orada ismini postgresql veriyor burada da aynı şey sadece ismini biz vermiş oluyoruz	
+
+--tablodan constraint silme
+alter table tablo_adi
+drop constraint constraint_adi
+
+--örnek
+alter table courses
+drop constraint uq_courses;
+
+--tablo ismini değiştirme
+alter table tablo_adi
+rename to new_table_name
+
+-- tabloyu kaldırma
+drop table if exists tablo_adi 
+[cascade | restrict]; --eğer hiçbir şey yazmazsak cascade ya da restrict diye bu tablo default olarak restrict oluyor. 
+-- O zaman ne oluyor. Bu tabloya bağlı nesneler varsa ilişkili o zaman silmiyor bu tabloyu restrict olunca da.
+
+
+--örnek
+drop table tablo_adi1,tablo_adi2;
+
+drop table tablo_adi cascade; -- Eğer cascade şeklinde yaparsak o zaman bağlı olduğu tablodan foreign key kısıtlamasını
+--kaldırsın ki diğer tabloda ilişkisi olmasın o şekilde de bu tabloyu silebilsin. Kaç tane tablo varsa bağlı olduğu
+-- hepsinden kaldırıyor kısıtlamayı
+
