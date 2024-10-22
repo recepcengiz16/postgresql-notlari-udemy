@@ -12,3 +12,5 @@ create table person (
 alter table customer
 alter column first_name set not null,
 alter column last_name drop not null;
+
+--örnek
