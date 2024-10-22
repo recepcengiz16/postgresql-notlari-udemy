@@ -14,3 +14,20 @@ alter column first_name set not null,
 alter column last_name drop not null;
 
 --örnek
+create table users (
+	id serial primary key,
+	username varchar(50),
+	email varchar(50),
+	constraint username_email_notnull
+	check -- burada email ve username in aynı anda null ve '' olmamasına bakılıyor. Biri null veya '' olursa insert olur.
+	(
+		not
+		(
+			(username is null or username='')
+			and
+			(email is null or email='')
+		)
+	)
+)
+
+
