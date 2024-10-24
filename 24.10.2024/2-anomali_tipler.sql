@@ -1,0 +1,2 @@
+-- anomali tipler
+--add data, delete data , update data, duplicate data, multiple data

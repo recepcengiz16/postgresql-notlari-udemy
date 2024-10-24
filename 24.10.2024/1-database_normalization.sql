@@ -1,0 +1,7 @@
+-- database normalization
+-- tasarrım prensibidir. Fazlalıklardan kaçınmadır.
+-- anormal durumları ortadan kaldıran durumlar içermektedir.
+-- veri tutarlılığını sağlar.
+-- disk boyutundan tasarruf sağlar.
+-- oldukça okunabilir yapı sağlar.
+-- kolya bakım
