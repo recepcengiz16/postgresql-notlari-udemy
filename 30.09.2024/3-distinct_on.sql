@@ -7,7 +7,7 @@ order by bcolor,fcolor;
 select distinct on(il) il,ilce 
 from adresler
 order by il,ilce; -- tekrar gruplamak istediğim column ismini yazıyorum distinct on(sütun adı). Yani normalde diyelim:
--- Bursa Nilüfer, Bursa Osmangazi, İstanbul Esenler, İstanbul Avcılar gibi satırları Bursa hep tekrar ettiği için 
+-- Bursa Nilüfer, Bursa Osmangazi, İstanbul Esenler, İstanbul Avcılar gibi satırları Bursa ve İstanbul hep tekrar ettiği için 
 --tekrar eden Bursa ve İstanbul satırlarında da ilk sıradakini alıyor.
 -- yani Bursa Nilüferi alır ve İstanbul Esenleri alıp sıralamaya devam eder.
 

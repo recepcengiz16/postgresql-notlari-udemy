@@ -10,7 +10,8 @@ select * from film order by title -- tek columna göre sıralama ,belirtilmediğ
 -- ille de select cümlesinin içinde yazmamıza gerek yok sıralayacağımız sütunu
 select address, city_id from address order by address_id gibi
 
-select rating,title from film order by rating, length desc; -- rating burada asc oluyor. length desc olmuş oluyor.
+select rating,title from film order by rating, length desc; -- rating burada asc oluyor. length desc olmuş oluyor. İlk önce rating e
+-- göre sıralıyor daha sonra ratingi aynı olanları da length e göre desc sıralıyor 
 
 --sıralama veritabanları için extra bir maliyettir.
 
