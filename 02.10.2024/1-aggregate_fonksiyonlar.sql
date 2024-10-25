@@ -56,7 +56,9 @@ from employees;
 
 --group by: verileri gruplamada kullanılır.
 --select içinde yazılan diğer yalın sütun isimleri group by içinde olmalıdır.
--- group by içinde olanlar select içinde olmak zorunda değil. Column aliaslar group by içinde kullanılamazlar
+-- group by içinde olanlar select içinde olmak zorunda değil. Ama koymazsan da neye göre grupladığın tabloda olmaz 
+-- güzel bir görüntü olmaz. 
+-- Column aliaslar group by içinde kullanılamazlar
 -- null olanlar da sorguya dahil edilir.
 
 -- birden çok sütuna göre gruplama. Önce ilk sıradakine göre sonra diğerlerine göre gruplar.
