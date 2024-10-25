@@ -27,9 +27,9 @@ SELECT CAST('00005469' as integer); -- bu şekilde de integer yapabiliriz
 
 
 --to_char: Birçok veri tipini stringe dönüştürür.
-SELECT payment_date TO_CHAR(payment_date,'HH24:MI:SS') from tablo_adi -- girilen tarihi bu formata çevir. 
-SELECT payment_date TO_CHAR(payment_date,'MON-DD-YYYY HH12:MI PM') from tablo_adi -- girilen tarihi bu formata çevir. 
-SELECT payment_date TO_CHAR(amount,'99D99') from tablo_adi -- girilen tarihi bu formata çevir. D nokta manasında 
+SELECT payment_date, TO_CHAR(payment_date,'HH24:MI:SS') from tablo_adi -- girilen tarihi bu formata çevir. 
+SELECT payment_date, TO_CHAR(payment_date,'MON-DD-YYYY HH12:MI PM') from tablo_adi -- girilen tarihi bu formata çevir. 
+SELECT payment_date, TO_CHAR(amount,'99D99') from tablo_adi -- girilen tarihi bu formata çevir. D nokta manasında 
 
 --cast: bir tipi başka bir tipe dönüştürür.
 -- bir diğer cast işlemi de expression::type. '00005469'::integer gibi
