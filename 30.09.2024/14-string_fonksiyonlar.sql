@@ -44,13 +44,17 @@ select rpad('Sağ',5,'*'); -- eksik olduğu için 5 karaktere tamamladı ve sağ
 --replace: bir string ifadede istenilen değerleri başka bir değerle değiştirir.
 select replace('Merhaba','a','e'); -- büyük küçük harf duyarlıdır.
 
--- split part: string ifadede verdiğimiz ayraca göre parçalara ayırır.
+-- split part: string ifadede verdiğimiz ayraca göre parçalara ayırır. Ve istediğimiz parçayı bize döner.
 select split_part('Merhaba,ben,recep',',',2);
+
+SELECT SPLIT_PART('2024-10-24', '-', 1) AS yil,
+       SPLIT_PART('2024-10-24', '-', 2) AS ay,
+       SPLIT_PART('2024-10-24', '-', 3) AS gun;
 
 -- substring: belirli karakterden itibaren şu kadar karakter getir demiş oluyoruz.
 select substring('Merhaba',2,3); -- 2. karakterden itibaren 3 karakter getir. indis 0 dan değil 1 den başlar.
 
--- position: bir string içinde başka bir string arar ve ilk bulduğunun indisini döner
+-- position: bir stringi başka bir string içinde arar ve ilk bulduğunun indisini döner
 select position('Bursa' in 'Bursa güzel bir şehir. Bursa büyük bir şehir.');
 
 -- reverse: verilen ifadeyi terse çevirir.
