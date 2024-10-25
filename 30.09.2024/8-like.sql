@@ -16,7 +16,7 @@ where first_name like 'Be__'; -- Be ile başlayıp sonrasında iki karakter olan
 
 select * 
 from film 
-where title like '%a%v%'; -- title sütunundaki değerin herhangi bir yerinde a ve v harfi olanlar.
+where title like '%a%v%'; -- title sütunundaki değerin herhangi bir yerinde önce a ve sonra v harfi olanlar.
 
 --alıştırma
 select *
