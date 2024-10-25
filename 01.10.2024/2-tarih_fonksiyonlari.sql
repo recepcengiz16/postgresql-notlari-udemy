@@ -1,6 +1,6 @@
 -- tarih fonksiyonları
 
---age: iki tarih arasındaki farkı veriyor yıl, ay ve gün bazında verebiliyor.
+--age: iki tarih arasındaki farkı veriyor yıl, ay ve gün bazında interval olarak verebiliyor.
 select age(timestamp '2023-08-10');
 --Kodunda timestamp '2023-08-10' ifadesi, belirtilen tarihin saat kısmı olmadan tam tarih ve zaman biçiminde ele alınmasını sağlar. 
 --Yani, 10 Ağustos 2023 tarihini tam bir zaman damgası olarak kullanıyorsun. 
