@@ -9,6 +9,7 @@ select age(timestamp '2023-08-10');
 SELECT age('2024-09-12', '1990-05-15');
 
 -- localtime: şu an hangi andaysak onun zamanını verir.
+select LOCALTIME;
 
 --date_part: Bir tarih içindeki ay yıl gün gibi değerleri almaya yarar.
 select date_part('YEAR',CURRENT_DATE);
