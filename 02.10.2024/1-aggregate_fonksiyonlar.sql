@@ -19,7 +19,8 @@ select sum(rental_duration)
 from film; -- null değerler hesaba katılmaz.
 
 select rating, sum(rental_duration)
-from film; -- group by ile kullanabilirsin aggregate fonksiyonlarının yanındaki sütunları(rating burada).
+from film; -- bu kod çalışmaz. Aggregate fonks. yanında yalın sütunlarla çalışmazlar. 
+-- group by ile kullanabilirsin aggregate fonksiyonlarının yanındaki sütunları(rating burada).
 -- Zaten mantık olarak da hatalı düşünsene her satır için o sütunu toplam olarak göstercek.
 
 --alıştırma
