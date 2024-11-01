@@ -5,6 +5,15 @@
 -- Ama Bursa Nilüfer ve Bursa Osmangazi şeklinde ise distinct il ve ilçe o zaman ikisine göre yaptığı için ve bu sefer ikisini 
 --de getirir
 
+/*
+	distinct ve group by arasındaki farklarda:
+	
+	distinct: Tekrarlı satırları kaldırmak, aggregate fonks. ile kullanılmaz, tekrarlı basit sorgularda kullanılır.
+	
+	group by: Satırları gruplandırarak özet bilgi oluşturmak, Genellikle agregat fonksiyonlarla birlikte kullanılır, 
+	Agregat fonksiyonlarla özetleme gereken durumlarda
+*/
+
 select DISTINCT special_features 
 from film; -- select den hemen sonra gelir.
 
