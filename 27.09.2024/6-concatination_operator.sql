@@ -1,4 +1,4 @@
--- concatenation operator(||): sütunlar ya da karakterler arasında bir birleştirme işlemi yapar. 
+-- concatenation operator(||): sütunlar ya da karakterler arasında bir birleştirme işlemi yapar. Postgresql de vardır.
 
 select country_id || ': ' || countryname 
 from country; -- iki farklı sütunu birleştirdik. '45: Germany' gibi
