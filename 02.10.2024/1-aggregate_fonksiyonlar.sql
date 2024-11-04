@@ -11,8 +11,8 @@ select round(avg(rental_duration),2)
 from film;
 
 select avg(rental_duration)::numeric(10,2) 
-from film;-- burada virgülden önce 10 haneye kadar hassasiyet olsun, 
---virgülden sonra 2 hassasiyet olsun dedik
+from film;-- 10: Toplam basamak sayısını belirtir. Bu, virgülden önceki ve sonraki tüm basamakları kapsar.
+--virgülden sonra 2 hassasiyet olsun dedik. Yani virgülden önce de 8 basamak kalıyor.
 
 --sum: verilen ifadenin ya da  sütunun toplamını bulur.
 select sum(rental_duration) 
