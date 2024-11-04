@@ -1,6 +1,8 @@
 Postgresql 1986 da Kaliforniyada bir proje olarak başladı. Bu projenin ismi postgresti. Daha sonra sql ile birleştirilerek 
 postgresql olarak yayınlandı.
 
-Postgresql gelişmiş, enterprice sistemlere(büyük ölçekli yazılım sistemleri) uygun açık kaynaklı ilişkisel veritabanı sistemidir.
-İlişkisel derken veritabanındaki tüm nesneler birbiri ile ilişkiye sahip, bu ilişki daha çok tablolar için kullanılır.
+Postgresql gelişmiş, enterprice sistemlere(büyük ölçekli yazılım sistemleri) uygun açık kaynaklı ilişkisel veritabanı yönetim sistemidir.
+SQL dilini destekler. İlişkisel derken veritabanındaki tüm nesneler birbiri ile ilişkiye sahip, 
+bu ilişki daha çok tablolar için kullanılır.
+
 Postgresql ilişkisel veritabanlarını desteklediği gibi json(non-relational yani nosql veritabanları) veritabanlarını da destekler
