@@ -1,7 +1,7 @@
 SQL Nedir? (Structured Query Language)
 
 Yapısal sorgulama dilidir. İlişkisel veritabanlarında(RDMS) kullanılan bir dildir. 
-SQL veritabanına erişmemizi ve değişiklik yapmamızı sağlar. SQL veritabanı ile iletişim kurmamızı sağlar.
+SQL veritabanına erişmemizi ve değişiklik yapmamızı sağlar. SQL; veritabanı ile iletişim kurmamızı sağlar.
 
 Sql ile verilerde okuma,silme,güncelleme, yeni satır ekleme işlemi yapabiliriz.
 objeler üzerinde creaeting,drop,changing,authorization yapabiliriz.
