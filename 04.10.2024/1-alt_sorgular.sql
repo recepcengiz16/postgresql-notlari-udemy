@@ -14,7 +14,7 @@ where country_id = (select country_id from country where country='Japan');
 
 select title,length,rating 
 from film 
-where (length,rating) = (select length,rating from film where title='Home Pity'); --normalder = gibi karşılaştırma ifadelerinde
+where (length,rating) = (select length,rating from film where title='Home Pity'); --normalde = gibi karşılaştırma ifadelerinde
 -- bir sütun dönmesi lazım ama bu şekilde de birden fazla sütun dönecek şekilde ayarlayabiliyoruz.
 /*
 Burada subquery (select length, rating from film where title='Home Pity') Home Pity 
