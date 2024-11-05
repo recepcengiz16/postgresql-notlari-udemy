@@ -32,6 +32,8 @@ create table authors (
 	last_name varchar(50)
 )
 
+insert into authors(first_name,last_name) values('Recep','Cengiz'); -- bu şekilde belirtmek lazım sütun adlarını da
+
 --insert into authors values(..) şeklinde yapamazsın çünkü bu şekilde yazınca bütun sütunlara veri atıcam demiş oluyorsun ya
 -- serial oldunca da otomatik yapıyor. Böyle yazarsak hata alırız o yüzden postgresql de sütun isimlerini de yazmak lazım
 -- insert into authors(first_name,last_name) values(val1,val2) gibi yazarsak doğrusu bu olacaktır.
