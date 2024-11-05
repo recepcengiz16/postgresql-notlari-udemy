@@ -11,7 +11,7 @@ SELECT age('2024-09-12', '1990-05-15');
 -- localtime: şu an hangi andaysak onun zamanını verir.
 select LOCALTIME;
 
---date_part: Bir tarih içindeki ay yıl gün gibi değerleri almaya yarar.
+--date_part: Bir tarih içindeki ay yıl gün gibi değerleri almaya yarar. double döner
 select date_part('YEAR',CURRENT_DATE);
 select date_part('MONTH',CURRENT_DATE);
 select date_part('DAY',CURRENT_DATE);
@@ -20,7 +20,7 @@ select date_part('QUARTER',CURRENT_DATE); --ÇEYREK
 select date_part('DECADE',CURRENT_DATE); --ON YIL
 select date_part('DOY',CURRENT_DATE); --Yılın hangi günü. 275
 
---extract: Bir tarih içinden yıl ay gün değerlerini çekmeye yarar.
+--extract: Bir tarih içinden yıl ay gün değerlerini çekmeye yarar. numeric döner
 select EXTRACT(CENTURY from current_date);
 select EXTRACT(QUARTER from current_date);
 select EXTRACT(DECADE from current_date);
