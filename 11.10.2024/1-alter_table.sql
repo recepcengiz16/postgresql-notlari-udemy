@@ -121,6 +121,7 @@ drop table if exists tablo_adi
 drop table tablo_adi1,tablo_adi2;
 
 drop table tablo_adi cascade; -- Eğer cascade şeklinde yaparsak o zaman bağlı olduğu tablodan foreign key kısıtlamasını
---kaldırsın ki diğer tabloda ilişkisi olmasın o şekilde de bu tabloyu silebilsin. Kaç tane tablo varsa bağlı olduğu
--- hepsinden kaldırıyor kısıtlamayı
+-- kaldırsın ki diğer tabloda ilişkisi olmasın o şekilde de bu tabloyu silebilsin. Kaç tane tablo varsa bağlı olduğu
+-- hepsinden kaldırıyor kısıtlamayı. Bu tabloya yabancı anahtarlarla bağlı başka tablolar varsa, 
+-- bu tablolar veya onların ilgili satırları da silinir.
 
