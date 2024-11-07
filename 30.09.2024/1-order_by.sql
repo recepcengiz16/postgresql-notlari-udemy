@@ -1,7 +1,7 @@
 -- order by: select sonucunda gelen verileri sıralamaya yarar.
 -- default olarak asc yani artan yönde
 -- desc de azalan yönde sıralama yapar.
---sql kodunun en altına konulur
+-- sql kodunun en altına konulur
 
 select * from table_adi order by expression_1 asc, expression_2 desc --gibi
 
