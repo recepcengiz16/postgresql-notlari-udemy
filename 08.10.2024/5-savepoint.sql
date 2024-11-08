@@ -4,8 +4,8 @@
 -- yani diyelim bir noktada sıkıntı yaşadık. bazı işlemler yaptık. Şu işleme kadar koru yaptıklarımı geri kalanı rollback yap
 -- diyebiliriz.
 
--- bir transaction içinde birden fazla savepoint kullanabiliriz. rollback savepoint a dersek a noktasına ama sadece rollback dersek
--- bütün işlemleri geri alır.
+-- bir transaction içinde birden fazla savepoint kullanabiliriz. 
+-- rollback to savepoint a => dersek a noktasına kadar geri alır ama sadece rollback dersek bütün işlemleri geri alır.
 
 begin;
 	insert into tablo_adi values(value1);
