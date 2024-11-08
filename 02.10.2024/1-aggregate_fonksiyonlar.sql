@@ -88,6 +88,10 @@ select distinct rating from film;
 
 
 -- having: group by ile yapılan sorgularda şart yazmak için vardır. where ile çalışmıyor aggregate fonks.
+/*
+	Neden group by da where kullanılmaz çünkü where verileri gruplamadan önce çalışır. Ama biz önce gruplayıp sonra şartımızı
+	yazmak istiyoruz. Having de gruplama işlemi tamamlandıktan sonra filtreleme yapar.
+*/
 select 
 	column1,
 	aggregate_function(column2)
