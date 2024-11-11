@@ -26,7 +26,8 @@ create table accounts (
 	last_login timestamp
 )
 
--- select into: select sorgusundan gelen veriler ve seçilen sütun tipleri ile oluşturulur.
+-- select into: select sorgusundan gelen veriler ve seçilen sütun tipleri ile oluşturulur. Bu komut, 
+-- mevcut bir tablodaki belirli verileri yeni bir tabloya kopyalar ve aynı anda bu yeni tabloyu oluşturur.
 select select_list -- select_list ten kasıt gelecek sütunlar belki birkaç tablodan joinle gelmiştir belki de sadece bir tablodan 
 into new_table_name
 from tablo_adi
