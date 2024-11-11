@@ -54,7 +54,7 @@ where length > 150
 order by title
 
 -- create table as: Bunun da iki yöntemi var. query ve table
---1) query
+--1) query: Bu tarz sorgularda da verileri ile beraber oluşturur tabloyu.
 create table new_table_name (column_name_list)
 as query_; -- burada column_name_list query den gelen isimler değil de benim verdiğim isimler olsun diyebiliyoruz. Sorgudan kaç tane
 -- sütun geliyorsa o kadar sütun ismi olmalı
