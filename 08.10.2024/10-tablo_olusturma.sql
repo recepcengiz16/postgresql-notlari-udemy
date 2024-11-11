@@ -29,7 +29,7 @@ create table accounts (
 -- select into: select sorgusundan gelen veriler ve seçilen sütun tipleri ile oluşturulur. Bu komut, 
 -- mevcut bir tablodaki belirli verileri yeni bir tabloya kopyalar ve aynı anda bu yeni tabloyu oluşturur.
 select select_list -- select_list ten kasıt gelecek sütunlar belki birkaç tablodan joinle gelmiştir belki de sadece bir tablodan 
-into new_table_name
+into table new_table_name -- table opsiyonel yazmayabilirsin de
 from tablo_adi
 where sart; -- Yeni eklediğimiz bir sütun olursa onu da postgresql otomatik olarak verecektir.
 
